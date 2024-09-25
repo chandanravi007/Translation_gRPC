@@ -4,7 +4,7 @@ import (
 	"context"
 	"log"
 
-	protos "github.com/chandanravi007/Translation_gRPC/UNARY/protos/protofiles"
+	protos "github.com/chandanravi007/gRPC/UNARY/protos/protofiles"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 )

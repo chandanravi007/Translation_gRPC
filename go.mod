@@ -1,4 +1,4 @@
-module github.com/chandanravi007/Translation_gRPC
+module github.com/chandanravi007/gRPC
 
 go 1.22.1
 

@@ -6,7 +6,7 @@ import (
 	"log"
 	"net"
 
-	protos "github.com/chandanravi007/Translation_gRPC/UNARY/protos/protofiles"
+	protos "github.com/chandanravi007/gRPC/UNARY/protos/protofiles"
 	"google.golang.org/grpc"
 )
 
