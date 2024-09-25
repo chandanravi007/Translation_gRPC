@@ -1,0 +1,19 @@
+syntax = "proto3";
+package protofiles;
+option go_package = "protofiles";
+
+
+
+service StreamingService{
+    rpc GetDataStreaming(DataRequest)returns(DataResponse);
+}
+
+
+message DataRequest{
+    string ID = 1;
+}
+
+message DataResponse{
+    string buffer =1; 
+    int32 part =2;
+}
