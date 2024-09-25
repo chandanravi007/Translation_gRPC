@@ -1,0 +1,20 @@
+syntax = "proto3";
+package gopractice.protos;
+option go_package = "protos/protofiles";
+
+
+// request
+message GreetRequest {
+    string countryCode = 1;
+    string userName = 2;
+}
+
+// response
+message GreetResponse {
+    string result = 1;
+}
+
+service GreetService {
+    //unary
+    rpc Greet(GreetRequest) returns (GreetResponse) {}
+}
