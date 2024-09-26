@@ -1,0 +1,28 @@
+syntax = "proto3";
+option go_package = "github.com/chandanravi007/gRPC/clientstreaming/protofiles";
+
+
+service phone{
+rpc NumCheck(stream NumCheckRequest)returns (NumCheckResponse){}
+}
+
+
+
+message contact{
+   string firstname = 1;
+   string lastname = 2;
+   uint32 phone_number = 3;
+}
+
+message NumCheckRequest{
+string number = 1;
+}
+
+message NumCheckResponse{
+repeated Result check_result = 1;
+}
+
+message Result {
+    string msg = 1;
+    string status = 2;
+}
