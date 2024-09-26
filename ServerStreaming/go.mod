@@ -1,4 +1,4 @@
-module github.com/chandanravi007/gRPC/UNARY
+module github.com/chandanravi007/gRPC/ServerStreaming
 
 go 1.22.1
 

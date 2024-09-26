@@ -1,19 +1,23 @@
 syntax = "proto3";
-package protofiles;
-option go_package = "protofiles";
+// package protofiles;
+option go_package = "./";
 
 
 
-service StreamingService{
-    rpc GetDataStreaming(DataRequest)returns(DataResponse);
+message DataRequest {
+    string id = 1;
 }
 
-
-message DataRequest{
-    string ID = 1;
+message DataResponse {
+    string buffer = 1;
+    int32 part = 2;
 }
 
-message DataResponse{
-    string buffer =1; 
-    int32 part =2;
+service StreamingService {
+    //unary
+    rpc GetDataStreaming(DataRequest) returns (stream DataResponse) {}
 }
+// COMMAND TO GENERATE THE FILES
+//protoc --go_out=. --go_opt=paths=source_relative \
+// --go-grpc_out=. --go-grpc_opt=paths=source_relative \
+// protofiles/dataStreaming.proto
