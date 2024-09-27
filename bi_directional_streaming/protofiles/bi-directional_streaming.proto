@@ -1,0 +1,11 @@
+syntax = "proto3";
+option go_package = "github.com/chandanravi007/gRPC/bi_directional_streaming/protofiles";
+
+service chatservice{
+    rpc Chat(stream chatMessage)returns(stream chatMessage){}
+}
+
+message chatMessage{
+    string message = 1;
+    string user = 2;
+}
